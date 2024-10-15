@@ -10,11 +10,13 @@ export default {
         '1rem': '1rem'
       },
       colors: {
-        '#a34cdb': '#a34cdb'
+        '#a34cdb': '#a34cdb',
+        '#e6ecf1': '#e6ecf1'
       },
       screens : {
-        'below-md': {'max': '767px'},
-        'below-lg': {'max': '991px'}
+        'custom-sm': '480px',
+        'custom-md': '990px',
+        'custom-lg': '1100px',
       }
     },
   },

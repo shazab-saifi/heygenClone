@@ -4,7 +4,6 @@ import Hearder from '../components/Header'
 const Home = () => {
   return (
     <div>
-      <Hearder/>
     </div>
   )
 }

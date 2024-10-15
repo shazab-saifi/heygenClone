@@ -4,16 +4,19 @@ import Contact from "./pages/Contact"
 import Login from "./pages/Login"
 import Pricing from "./pages/Pricing"
 import Signup from "./pages/Signup"
+import Layout from "./components/Layout"
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/contact" element={<Contact/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/pricing" element={<Pricing/>} />
-        <Route path="/signup" element={<Signup/>} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/pricing" element={<Pricing />} />
+        </Route>
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </Router>
   )
