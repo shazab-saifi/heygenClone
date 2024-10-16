@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'manishfont';
+    src: url('https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66e170da36497f0ab29ae4c8_ObjectSans-Regular.otf') format('opentype');
+    /* Update path if necessary */
+}
+
+body{
+    font-family: "manishfont";
+    line-height: 1.5;
+}

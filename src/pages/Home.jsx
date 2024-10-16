@@ -1,5 +1,4 @@
 import React from 'react'
-import Hearder from '../components/Header'
 
 const Home = () => {
   return (
