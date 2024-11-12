@@ -5,7 +5,7 @@ import ProductMenu from './ProductMenu'
 const NavItems = ({ label, children, isOpen }) => {
   return (
     <>
-      <div className='relative text-[.9rem]'>
+      <div className='relative text-[.9rem] bg-white'>
         <div className='p-[.625rem] flex items-center'>
           <p className='cursor-pointer'>
             {label}
@@ -13,7 +13,7 @@ const NavItems = ({ label, children, isOpen }) => {
           <ChevronDown className={`transition-transform w-4 h-4 ml-1 duration-200 ${isOpen ? 'rotate-180 opacity-100' : 'rotate-0 opacity-30'}`} />
         </div>
         {isOpen && <>
-          <div className='absolute origin-top-left left-0 top-full transition-transform duration-200 w-auto min-w-[19.375rem] p-[1.25rem] overflow-hidden rounded-[.5rem]'>
+          <div className='absolute origin-top-left left-0 top-full transition-transform duration-200 w-auto min-w-[19.375rem] p-[1.25rem] overflow-hidden rounded-[.5rem] bg-white'>
             <div className='flex items-stretch justify-end flex-col gap-4'>
               {children}
             </div>
@@ -54,7 +54,7 @@ const NavMenu = () => {
   }
 
   return (
-    <div className='flex justify-start items-center'>
+    <div className='flex justify-start items-center bg-white'>
       <ProductMenu isOpen={isProductMenuOpen} onToggle={toggleProductMenu} />
       {menuItems.map((item, index) => (
         <div 

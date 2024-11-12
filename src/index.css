@@ -1,3 +1,4 @@
+@import 'normalize.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +9,15 @@
     /* Update path if necessary */
 }
 
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: "manishfont";
     line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

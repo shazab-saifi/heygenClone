@@ -1,8 +1,10 @@
 import React from 'react'
+import heygenFooterGif from '../assets/heygenFooter.gif'
 
 const Footer = () => {
   return (
-    <div className='z-1 fixed bottom-0'>Footer</div>
+    <div>
+    </div>
   )
 }
 

@@ -19,27 +19,29 @@ const Hearder = () => {
 
   return (
     <>
-      <div className="w-full h-full box-border px-4 custom-md:px-6 text-[.9rem]">
-        <div className='py-[.875rem] custom-md:py-4 flex justify-between items-center'>
-          <div className='custom-sm:pl-[10px] custom-md:pl-0'>
-            <img className='w-[86px] custom-sm:w-[131px] custom-md:w-[160px] custom-lg:w-[172.5px]' src={heygenlogo} alt="Logo" />
+      <div className="w-screen fixed top-0 z-50 box-border bg-white px-[.9rem] md:px-6 text-[.9rem]">
+        <div className='py-[.875rem] h-auto md:py-4 flex justify-between items-center'>
+          <div className='sm:pl-[10px] md:pl-0'>
+            <img className='w-[86px] sm:w-[131px] md:w-[160px] lg:w-[172.5px]' src={heygenlogo} alt="Logo" />
           </div>
-          <div className='hidden custom-md:flex items-center justify-center'>
+          <div className='hidden md:flex items-center justify-center'>
             <NavMenu />
             <Link className='px-[1.25rem] py-[.625rem]' to='/pricing'>Pricing</Link>
           </div>
-          <div className='flex w-auto justify-between custom-md:ml-[22rem] gap-2'>
-            <Link to='/contact' className='hidden custom-md:ml-auto custom-md:block custom-md:py-[.625rem] custom-md:px-5'>
+          <div className='flex w-auto justify-between md:ml-[22rem] gap-2'>
+            <Link to='/contact' className='hidden md:ml-auto md:flex items-center md:py-[.625rem md:px-5'>
               Contact Sales
             </Link>
-            <Button className='custom-md:ml-auto ml-20 custom-md:w-[183.5px] custom-md:h-full px-6 pb-[.55rem] w-[170.05px] pt-[.75rem] h-[44.8px] whitespace-nowrap'>
+            <div className='flex gap-[8px]'>
+            <Button className='md:ml-auto ml-20 md:w-[183.5px] md:h-full px-6 pb-[.55rem] w-[170.05px] pt-[.75rem] h-[44.8px] whitespace-nowrap'>
               Sign up for free
             </Button>
-            <Link className='py-2 px-6 text-[.8rem] text-black bg-#e6ecf1 text-center font-medium rounded-[30px] hidden custom-md:flex items-center justify-center custom-md:font-semibold custom-md:h-full custom-md:px-6 custom-md:py-[.70rem] transition-colors hover:bg-#a34cdb hover:text-white'>
+            <Link className='py-2 px-6 text-[.8rem] text-black bg-#e6ecf1 text-center font-medium rounded-[30px] hidden md:flex items-center justify-center md:font-semibold md:h-full md:px-6 md:py-[.70rem] transition-colors hover:bg-#a34cdb hover:text-white'>
               Login
             </Link>
+            </div>
           </div>
-          <div onClick={toggleMenu} className='relative cursor-pointer w-6 h-6 flex items-center mr-0 custom-md:hidden'>
+          <div onClick={toggleMenu} className='relative cursor-pointer w-6 h-6 flex items-center mr-0 md:hidden'>
             <MenuIcon className={`absolute w-6 h-6 transition-transform duration-300 ease-in-out ${isMenuOpen ? 'opacity-0 scale-75' : 'opacity-40 scale-100'}`} />
             <X className={`absolute w-6 h-6 transition-transform duration-300 ease-in-out ${isMenuOpen ? 'opacity-40 scale-100' : 'opacity-0 scale-75'}`} />
           </div>
@@ -47,9 +49,9 @@ const Hearder = () => {
       </div>
       <div
         className={`
-          ${isMenuOpen ? 'opacity-100 clip-path-open' : 'opacity-0 clip-path-closed'}
-          transition-all ease-in-out duration-500
-          w-full h-[90svh] min-w-[200px] z-50 absolute custom-md:hidden
+          ${isMenuOpen ? 'translate-y-0' : '-translate-y-[56rem]'}
+          transition-transform duration-500 bg-white shadow-lg
+          w-full h-full min-w-[200px] z-40 fixed top-[72.8px] md:hidden
         `}>
         <div className='w-full h-auto pt-4 tracking-wide leading-tight flex flex-col justify-between gap-1 items-start'>
           <div className='w-full py-[.625rem] px-4 text-[.8rem] flex justify-between items-center'>
@@ -82,7 +84,7 @@ const Hearder = () => {
             </Button>
           </div>
           <div>
-            <Link className='py-2 px-6 text-[.8rem] text-black bg-#e6ecf1 text-center font-medium rounded-[30px]'>
+            <Link to='/login' className='py-2 px-6 text-[.8rem] text-black bg-#e6ecf1 text-center font-medium rounded-[30px] hover:bg-#a34cdb hover:text-white'>
               Login
             </Link>
           </div>

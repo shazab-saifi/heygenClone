@@ -14,7 +14,7 @@ const ProductMenu = ({ isOpen, onToggle }) => {
             </div>
             {isOpen && <>
                 <div className='fixed w-full h-full top-[92px] left-0 backdrop-blur-lg z-0'>
-                    <div className='pt-16 pb-24 pl-48 pr-5 w-full'>
+                    <div className='pt-16 pb-24 pl-48 pr-5 w-full bg-white'>
                         <div className='text-left flex gap-28'>
                             <a href="#">
                                 <p className='uppercase text-#a34cdb text-[1.25rem] font-medium mb-[.75rem]'>create</p>
